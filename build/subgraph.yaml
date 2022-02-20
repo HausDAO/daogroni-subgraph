@@ -5,87 +5,23 @@ schema:
   file: schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: V22AndSafeMinionFactory
-    network: mainnet
+    name: daogroni
+    network: xdai
     source:
-      address: "0x96f9D443Bd71146fF15310a7748d61C8FF72D5C3"
-      abi: V22AndSafeMinionFactory
-      startBlock: 14062801
+      address: "0x1d0f5D1f5E1FB74a86c19309368D434E9f7BB608"
+      abi: daogroni
+      startBlock: 20726647
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - Shaman
-        - MinionSafeConfig
+        - Transfer
       abis:
-        - name: V22AndSafeMinionFactory
-          file: V22AndSafeMinionFactory/abis/V22AndSafeMinionFactory.json
+        - name: daogroni
+          file: daogroni/abis/daogroni.json
       eventHandlers:
-        - event: SummonComplete(address,indexed address,address,address,string)
-          handler: handleSummonComplete
-      file: V22AndSafeMinionFactory/V22AndSafeMinionFactory.wasm
-  - kind: ethereum/contract
-    name: V22AndSafeMinionFactoryv2
-    network: mainnet
-    source:
-      address: "0xBc2696ff8a3c7bc2E5C0c6Ea5A0cA0c5D36cE39a"
-      abi: V22AndSafeMinionFactory
-      startBlock: 14141164
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.5
-      language: wasm/assemblyscript
-      entities:
-        - Shaman
-        - MinionSafeConfig
-      abis:
-        - name: V22AndSafeMinionFactory
-          file: V22AndSafeMinionFactoryv2/abis/V22AndSafeMinionFactory.json
-      eventHandlers:
-        - event: SummonComplete(address,indexed address,address,address,string)
-          handler: handleSummonComplete
-      file: V22AndSafeMinionFactory/V22AndSafeMinionFactory.wasm
-  - kind: ethereum/contract
-    name: YeeterFactory
-    network: mainnet
-    source:
-      address: "0x3b603BF5DaFF47F174cA3Fd2d2f8d690A720b59F"
-      abi: YeeterFactory
-      startBlock: 14062860
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.5
-      language: wasm/assemblyscript
-      entities:
-        - Shaman
-        - YeeterConfig
-      abis:
-        - name: YeeterFactory
-          file: YeeterFactory/abis/YeeterFactory.json
-      eventHandlers:
-        - event: SummonYeetComplete(indexed
-            address,address,address,uint256,uint256,uint256,uint256,uint256,string)
-          handler: handleSummonYeeter
-        - event: PlatformFeeUpdate(uint256,uint256)
-          handler: handlePlatformFeeUpdate
-      file: YeeterFactory/YeeterFactory.wasm
-templates:
-  - kind: ethereum/contract
-    name: YeeterTemplate
-    network: mainnet
-    source:
-      abi: YeeterShaman
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.5
-      language: wasm/assemblyscript
-      file: templates/YeeterTemplate/YeeterTemplate.wasm
-      entities:
-        - Yeet
-      abis:
-        - name: YeeterShaman
-          file: YeeterTemplate/abis/YeeterShaman.json
-      eventHandlers:
-        - event: YeetReceived(indexed address,uint256,address,uint256,uint256)
-          handler: handleYeetReceived
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: daogroni/daogroni.wasm
+templates: []

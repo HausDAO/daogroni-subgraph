@@ -1,31 +1,7 @@
 module.exports.config = {
   mainnet: {
-    dataSources: [
-      {
-        name: "v22AndSafeMinion",
-        template: "v22AndSafeMinion-ds.yaml",
-        address: "0x96f9D443Bd71146fF15310a7748d61C8FF72D5C3",
-        startBlock: 14062801,
-      },
-      {
-        name: "v22AndSafeMinionv2",
-        template: "v22AndSafeMinionv2-ds.yaml",
-        address: "0xBc2696ff8a3c7bc2E5C0c6Ea5A0cA0c5D36cE39a",
-        startBlock: 14141164,
-      },
-      {
-        name: "YeeterFactory",
-        template: "yeeterFactory-ds.yaml",
-        address: "0x3b603BF5DaFF47F174cA3Fd2d2f8d690A720b59F",
-        startBlock: 14062860,
-      },
-    ],
-    templates: [
-      {
-        name: "yeeterTemplate",
-        template: "yeeter-template.yaml",
-      },
-    ],
+    dataSources: [],
+    templates: [],
   },
   "arbitrum-one": {
     dataSources: [],
@@ -42,58 +18,17 @@ module.exports.config = {
   xdai: {
     dataSources: [
       {
-        name: "v22AndSafeMinion",
-        template: "v22AndSafeMinion-ds.yaml",
-        address: "0xb30c2F83c027667C66A2CdFE0D3ba4Ba6B834F04",
-        startBlock: 19988137,
-      },
-      {
-        name: "v22AndSafeMinionv2",
-        template: "v22AndSafeMinionv2-ds.yaml",
-        address: "0xd06b40B5030D8d46645FaceE1fA31C9F9A83F567",
-        startBlock: 20468085,
-      },
-      {
-        name: "YeeterFactory",
-        template: "yeeterFactory-ds.yaml",
-        address: "0x398e3a9c53C30Cac5B1ce9cfAbbE011338703686",
-        startBlock: 19988177,
+        name: "daogroni",
+        template: "daogroni-ds.yaml",
+        address: "0x1d0f5D1f5E1FB74a86c19309368D434E9f7BB608",
+        startBlock: 20726647,
       },
     ],
-    templates: [
-      {
-        name: "yeeterTemplate",
-        template: "yeeter-template.yaml",
-      },
-    ],
+    templates: [],
   },
   rinkeby: {
-    dataSources: [
-      {
-        name: "v22AndSafeMinion",
-        template: "v22AndSafeMinion-ds.yaml",
-        address: "0xf734feCA5A2441103E6a8B4Ae9172Dfe92cA145a",
-        startBlock: 9901609,
-      },
-      {
-        name: "v22AndSafeMinionv2",
-        template: "v22AndSafeMinionv2-ds.yaml",
-        address: "0x61f71A402779108f25aD4B369Dd217d3F008B458",
-        startBlock: 10101432,
-      },
-      {
-        name: "YeeterFactory",
-        template: "yeeterFactory-ds.yaml",
-        address: "0x378472D32Bc8c2D55CF9E8F962F867e94d752ADa",
-        startBlock: 9901675,
-      },
-    ],
-    templates: [
-      {
-        name: "yeeterTemplate",
-        template: "yeeter-template.yaml",
-      },
-    ],
+    dataSources: [],
+    templates: [],
   },
   matic: {
     dataSources: [],

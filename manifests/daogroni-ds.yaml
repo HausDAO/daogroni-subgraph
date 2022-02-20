@@ -1,0 +1,20 @@
+kind: ethereum/contract
+name: daogroni
+network:
+source:
+  address: ""
+  abi: daogroni
+  startBlock:
+mapping:
+  kind: ethereum/events
+  apiVersion: 0.0.5
+  language: wasm/assemblyscript
+  entities:
+    - Transfer
+  abis:
+    - name: daogroni
+      file: ./abis/daogroni.json
+  eventHandlers:
+    - event: Transfer(indexed address,indexed address,indexed uint256)
+      handler: handleTransfer
+  file: ./src/daogroni-mapping.ts
